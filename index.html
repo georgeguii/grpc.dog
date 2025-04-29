@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" id="html-doc">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>gRPC.dog - Status gRPC com Cachorros</title>
+    <title id="page-title">gRPC.dog - Status gRPC com Cachorros</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,22 +12,38 @@
 <body>
     <header>
         <div class="container">
-            <div class="logo-container">
-                <img src="grpcdog.png" alt="gRPC.dog Logo" class="logo">
+            <div class="header-content">
+                <div class="logo-container">
+                    <img src="grpcdog.png" alt="gRPC.dog Logo" class="logo">
+                    <p id="header-description">Status gRPC ilustrados com cachorros</p>
+                </div>
+                <div class="header-controls">
+                    <div class="language-toggle" id="language-toggle">
+                        <svg class="language-toggle-icon" viewBox="0 0 24 24">
+                            <path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z"/>
+                        </svg>
+                        <span class="language-toggle-text" id="language-text">EN</span>
+                    </div>
+                    <div class="theme-toggle" id="theme-toggle">
+                        <svg class="theme-toggle-icon" viewBox="0 0 24 24">
+                            <path d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1S11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"/>
+                        </svg>
+                        <span class="theme-toggle-text" id="theme-text">Tema</span>
+                    </div>
+                </div>
             </div>
-            <p>Status gRPC ilustrados com cachorros</p>
         </div>
     </header>
 
     <div class="ad-banner top-ad">
         <div class="container">
-            <div class="ad-placeholder">Espaço para anúncio</div>
+            <div class="ad-placeholder" id="ad-placeholder-top">Espaço para anúncio</div>
         </div>
     </div>
 
     <main class="container">
         <div class="search-container">
-            <input type="text" id="search" placeholder="Buscar código de status (ex: 1, 3, 13...)">
+            <input type="text" id="search" placeholder="Buscar código de status (ex: 1, 3, 13...)" data-placeholder-pt="Buscar código de status (ex: 1, 3, 13...)" data-placeholder-en="Search status code (ex: 1, 3, 13...)">
         </div>
 
         <div class="status-grid" id="status-grid">
@@ -37,14 +53,14 @@
 
     <div class="ad-banner bottom-ad">
         <div class="container">
-            <div class="ad-placeholder">Espaço para anúncio</div>
+            <div class="ad-placeholder" id="ad-placeholder-bottom">Espaço para anúncio</div>
         </div>
     </div>
 
     <footer>
         <div class="container">
-            <p>gRPC.dog - Inspirado no HTTP Cat</p>
-            <p>Imagens de cachorros para ilustrar códigos de status gRPC</p>
+            <p id="footer-text-1">gRPC.dog - Inspirado no HTTP Cat</p>
+            <p id="footer-text-2">Imagens de cachorros para ilustrar códigos de status gRPC</p>
         </div>
     </footer>
 
